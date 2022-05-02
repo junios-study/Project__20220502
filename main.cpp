@@ -4,25 +4,37 @@ using namespace std;
 
 int main()
 {
-	int MyMoney = 100;
-	int Operand = 10;
+	int Score = 0;
+	cin >> Score;
+	char Grade = 'F';
 
-	cout << MyMoney + Operand << endl;
-	cout << MyMoney * Operand << endl;
-	cout << MyMoney - Operand << endl;
-	cout << MyMoney / Operand << endl;
-	cout << MyMoney % Operand << endl;
-	cout << 10 + (2 * 20) << endl;
+	if (Score >= 90 && Score <= 100)
+	{
+		Grade = 'A';
+	}
+	else if (Score >= 80 && Score < 90)
+	{
+		Grade = 'B';
+	}
+	else if (Score >= 70 && Score < 80)
+	{
+		Grade = 'C';
+	}
+	else if (Score >= 60 && Score < 70)
+	{
+		Grade = 'D';
+	}
+	else if (Score >=0 && Score < 60)
+	{
+		Grade = 'F';
+	}
+	else
+	{
+		cout << "Error" << endl;
+		return -1;
+	}
 
-	float MyR = 0.1f;
-	float MyG = 0.3f;
-	float MyB = 0.2f;
-
-	float GrayColor = (0.299f * MyR) + (0.587f * MyG) 
-		+ (0.114f * MyB);
-
-
-	cout << GrayColor << endl;
+	cout << "Grade : " << Grade << endl;
 
 	return 0;
 }
