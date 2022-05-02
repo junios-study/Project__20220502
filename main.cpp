@@ -4,31 +4,14 @@ using namespace std;
 
 int main()
 {
-	int Score = 0;
-	cin >> Score;
-	char Grade = 'F';
-
-	switch (Score/10)
+	int Sum = 0;
+	for (int i = 1; i <= 100; i++)
 	{
-		case 10:
-		case 9:
-			Grade = 'A';
-			break;
-		case 8:
-			Grade = 'B';
-			break;
-		case 7:
-			Grade = 'C';
-			break;
-		case 6:
-			Grade = 'D';
-			break;
-		default:
-			Grade = 'F';
+		Sum += i;
 	}
 
+	cout << Sum << endl;
 
-	cout << "Grade : " << Grade << endl;
 
 	return 0;
 }
