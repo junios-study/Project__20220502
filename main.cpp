@@ -20,24 +20,41 @@ int main()
 		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
 	};
 
-	for (int Y = 0; Y < 10; ++Y)
+	bool Running = true;
+
+	while (Running)
 	{
-		for (int X = 0; X < 10; ++X)
+		//Input()
+		char Direction = 'W';
+		cin >> Direction;
+
+		//Process();
+		if (Direction == 'Q')
 		{
-			if (Map[Y][X] == 1)
-			{
-				cout << '=' << ' ';
-			}
-			else if (Map[Y][X] == 0)
-			{
-				cout << ' ' << ' ';
-			}
-			else if (Map[Y][X] == 2)
-			{
-				cout << 'G' << ' ';
-			}
+			Running = false;
 		}
-		cout << '\n';
+
+		//Render()
+		system("cls");
+		for (int Y = 0; Y < 10; ++Y)
+		{
+			for (int X = 0; X < 10; ++X)
+			{
+				if (Map[Y][X] == 1)
+				{
+					cout << '=' << ' ';
+				}
+				else if (Map[Y][X] == 0)
+				{
+					cout << ' ' << ' ';
+				}
+				else if (Map[Y][X] == 2)
+				{
+					cout << 'G' << ' ';
+				}
+			}
+			cout << '\n';
+		}
 	}
 
 
