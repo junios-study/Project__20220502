@@ -4,21 +4,17 @@ using namespace std;
 
 int main()
 {
-	int Sum = 0;
-	for (int i = 1; i <= 100; i += 2)
+	int Count = 0;
+	cin >> Count;
+
+	for (int j = 1; j <= Count; ++j)
 	{
-		Sum += i;
+		for (int i = 1; i <= j; ++i)
+		{
+			cout << '*';
+		}
+		cout << '\n';
 	}
-
-	cout << Sum << endl;
-
-	Sum = 0;
-	for (int i = 2; i <= 100; i += 2)
-	{
-		Sum += i;
-	}
-
-	cout << Sum << endl;
 
 
 
