@@ -2,19 +2,25 @@
 
 using namespace std;
 
+
+
 int main()
 {
-	int Count = 0;
-	cin >> Count;
+	char Inventory[20] = { 0,  };
 
-	for (int j = 1; j <= Count; ++j)
+	int Count = sizeof(Inventory) / sizeof(char);
+
+	for (int Index = 0; Index < Count; ++Index)
 	{
-		for (int i = 1; i <= j; ++i)
-		{
-			cout << '*';
-		}
-		cout << '\n';
+		Inventory[Index] = Index + 1;
 	}
+
+	for (int Index = 0; Index < Count; ++Index)
+	{
+		cout << Inventory[Index] << endl;
+	}
+
+
 
 
 
