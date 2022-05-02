@@ -8,31 +8,25 @@ int main()
 	cin >> Score;
 	char Grade = 'F';
 
-	if (Score >= 90 && Score <= 100)
+	switch (Score/10)
 	{
-		Grade = 'A';
+		case 10:
+		case 9:
+			Grade = 'A';
+			break;
+		case 8:
+			Grade = 'B';
+			break;
+		case 7:
+			Grade = 'C';
+			break;
+		case 6:
+			Grade = 'D';
+			break;
+		default:
+			Grade = 'F';
 	}
-	else if (Score >= 80 && Score < 90)
-	{
-		Grade = 'B';
-	}
-	else if (Score >= 70 && Score < 80)
-	{
-		Grade = 'C';
-	}
-	else if (Score >= 60 && Score < 70)
-	{
-		Grade = 'D';
-	}
-	else if (Score >=0 && Score < 60)
-	{
-		Grade = 'F';
-	}
-	else
-	{
-		cout << "Error" << endl;
-		return -1;
-	}
+
 
 	cout << "Grade : " << Grade << endl;
 
