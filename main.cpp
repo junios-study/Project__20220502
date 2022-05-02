@@ -6,18 +6,38 @@ using namespace std;
 
 int main()
 {
-	char Inventory[20] = { 0,  };
+	//1 == º®
+	int Map[10][10] = {
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 1, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 1, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 2, 1 },
+		{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+	};
 
-	int Count = sizeof(Inventory) / sizeof(char);
-
-	for (int Index = 0; Index < Count; ++Index)
+	for (int Y = 0; Y < 10; ++Y)
 	{
-		Inventory[Index] = Index + 1;
-	}
-
-	for (int Index = 0; Index < Count; ++Index)
-	{
-		cout << Inventory[Index] << endl;
+		for (int X = 0; X < 10; ++X)
+		{
+			if (Map[Y][X] == 1)
+			{
+				cout << '=' << ' ';
+			}
+			else if (Map[Y][X] == 0)
+			{
+				cout << ' ' << ' ';
+			}
+			else if (Map[Y][X] == 2)
+			{
+				cout << 'G' << ' ';
+			}
+		}
+		cout << '\n';
 	}
 
 
